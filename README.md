@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Simple Online Store with Firebase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple online store project created in React using Firebase for authentication and storing product and cart data.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Registration and login using Firebase Authentication.
+- Displaying a list of products with details such as name, price, and description.
+- Adding products to the cart.
+- Removing products from the cart.
+- Displaying a cart summary with the total price.
 
-### `npm start`
+## Running the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository to your local computer.
+git clone https://github.com/MWolok/SimpleShop.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navigate to the project directory.
 
-### `npm test`
+3. Install dependencies.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Set up Firebase configuration.
 
-### `npm run build`
+- Create a Firebase project on the [Firebase Console](https://console.firebase.google.com/).
+- Configure Firebase Authentication and Firebase Realtime Database.
+- Copy your Firebase config (`firebaseConfig`) and paste it into the `src/firebaseConfig.js` file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Start the project.
+6. npm start
+![2023-09-14_14h55_30](https://github.com/MWolok/SimpleShop/assets/86103240/181577ad-af9a-4730-8e27-061ec8849dd3)
+![2023-09-14_14h54_52](https://github.com/MWolok/SimpleShop/assets/86103240/b8ebfbed-42cd-482b-8cd6-1cbbde1fcc97)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![2023-09-14_14h55_33](https://github.com/MWolok/SimpleShop/assets/86103240/b1317cd2-f831-42a1-8d41-7bf5301ce01f)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
