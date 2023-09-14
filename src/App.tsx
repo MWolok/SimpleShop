@@ -11,11 +11,11 @@ import AppRouter from "./components/router/AppRouter";
 
 function App() {
 	return (
-		<>
+		
 			<BrowserRouter>
 				<AppRouter></AppRouter>
 			</BrowserRouter>
-		</>
+		
 	);
 }
 

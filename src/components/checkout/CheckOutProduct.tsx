@@ -1,15 +1,19 @@
 import React from "react";
 
 import '../checkout/CheckOutProduct.css'
-interface props {
-    id:number,
-    title: string,
-    price: number,
-    rating:number,
-    img:string
-}
+import { useStateValue } from "../../context/cartContext";
+import { product } from "../../model/product";
 
-export default function CheckOutProduct(values:props) {
+
+export default function CheckOutProduct(values:product) {
+	const context = useStateValue();
+	const [state, dispatch] = context || [{ basket: [] }, () => {}];
+
+	const removeFromCart = (produktId: number) => {
+
+		dispatch({ type: "REMOVE_FROM_BASKET", id: produktId });
+	  };
+
 	return (
 		<div className="checkoutProduct">
 			<img src={values.img} alt="" className="checkoutProduct__image" />
@@ -27,7 +31,7 @@ export default function CheckOutProduct(values:props) {
 							<p>⭐</p>
 						))}
 				</div>
-				<button onClick={()=>{}}>Remove from Basket</button>
+				<button onClick={()=>removeFromCart(values.id)}>Remove</button>
 			</div>
 		</div>
 	);

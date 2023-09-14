@@ -1,19 +1,17 @@
 import React from "react";
 import "../product/Product.css";
-
-interface props {
-    id:number,
-    title: string,
-    price: number,
-    rating:number,
-    img:string
-}
+import { useStateValue } from "../../context/cartContext";
+import { product } from "../../model/product";
 
 
 
-export default function Product(values:props) {
+export default function Product(values:product) {
+	const context = useStateValue();
+	const [state, dispatch] = context || [{ basket: [] }, () => {}];
 
-
+	const addToCart = (produkt: product) => {
+		dispatch({ type: "ADD_TO_BASKET", item: produkt });
+	  };
 
 	return (
 		<div className="product">
@@ -28,7 +26,7 @@ export default function Product(values:props) {
 				alt=""
 			/>
 
-			<button className="product__button">Add to Cart</button>
+			<button onClick={()=>addToCart(values)} className="product__button">Add to Cart</button>
 		</div>
 	);
 }
