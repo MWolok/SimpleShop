@@ -25,6 +25,7 @@
 }
 
 .product__button {
+	border-radius: 5px;
 	cursor: pointer;
 	background: #ff9f00;
 	border: 1px solid;

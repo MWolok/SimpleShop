@@ -5,7 +5,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "../header/Header.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../context/cartContext";
-import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import VpnKeyIcon from "@mui/icons-material/VpnKey";
 
 export default function Header() {
 	const context = useStateValue();
@@ -17,12 +17,15 @@ export default function Header() {
 
 	return (
 		<div className="header">
-			<div className="header__logo">
-				<LocalOfferOutlinedIcon
-					className="header_logoImage"
-					fontSize="large"></LocalOfferOutlinedIcon>
-				<h2 className="header_logoTitle">SimpleShop</h2>
-			</div>
+			<Link to="/" style={{ textDecoration: "none" }}>
+				<div className="header__logo">
+					<LocalOfferOutlinedIcon
+						className="header_logoImage"
+						fontSize="large"></LocalOfferOutlinedIcon>
+					<h2 className="header_logoTitle">SimpleShop</h2>
+				</div>
+			</Link>
+
 			<div className="header__search">
 				<input type="text" className="header__searchInput" />
 				<SearchOutlinedIcon className="header__searchIcon"></SearchOutlinedIcon>
@@ -34,11 +37,6 @@ export default function Header() {
 						<span className="nav__itemLineTwo">SignIn</span>
 					</div>
 				</Link>
-
-				<div className="nav__item">
-					<span className="nav__itemLineOne">Simple</span>
-					<span className="nav__itemLineTwo">Shop</span>
-				</div>
 				<Link to="/checkout" style={{ textDecoration: "none" }}>
 					<div className="nav__itemBasket">
 						<ShoppingBasketIcon fontSize="large" />
